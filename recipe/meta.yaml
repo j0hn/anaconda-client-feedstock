@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - anaconda = binstar_client.scripts.cli:main
@@ -23,11 +23,6 @@ requirements:
   build:
     - python
     - setuptools
-    - clyent
-    - requests >=2.0
-    - pyyaml
-    - python-dateutil
-    - pytz
 
   run:
     - python
